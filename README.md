@@ -24,9 +24,10 @@ python -m unittest discover -s tests -v
 python scripts/recovery_lab.py move
 python scripts/recovery_lab.py detach
 python scripts/recovery_lab.py drift
+python scripts/import_lab.py
 ```
 
-Each script creates and cleans up its own temporary local Terraform directory. Real state is not touched. The `import` exercise lives at `labs/import` and requires explicit user commands (see [state recovery guide](docs/STATE_RECOVERY.md)). The random provider is the only downloadable provider required for that exercise.
+Each script creates and cleans up its own temporary local Terraform directory. Real state is not touched. The `import` exercise uses a disposable local workspace and the logical random provider; you can also run the import manually using the [state recovery guide](docs/STATE_RECOVERY.md).
 
 ## Decisions and recovery documentation
 

@@ -22,4 +22,5 @@ jobs:
       - run: python scripts/recovery_lab.py move
       - run: python scripts/recovery_lab.py detach
       - run: python scripts/recovery_lab.py drift
+      - run: python scripts/import_lab.py
       - run: python scripts/check_repository.py
